@@ -2,7 +2,10 @@
 
 'use strict';
 
-require('dotenv').config();
+const joinPath = require('path').join;
+require('dotenv').config({
+    path: joinPath(process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'], '/.umuplus.env')
+});
 
 var credentials = {
     url: process.env.NAMEDOTCOM_URL,
