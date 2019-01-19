@@ -4,6 +4,7 @@ body, div {
     overflow: hidden;
 }
 
+/* isometric */
 .terrain:hover {
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.6);
     z-index: 9999999;
@@ -16,6 +17,7 @@ body, div {
     cursor: pointer;
 }
 
+/* text effects */
 .ml13 {
     color: #fff;
     font-size: 12px;
@@ -27,4 +29,4 @@ body, div {
 .ml13 .letter {
     display: inline-block;
     line-height: 1em;
-  }
+}
