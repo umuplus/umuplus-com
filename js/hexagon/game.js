@@ -9,20 +9,16 @@ function Game(el, terrains) {
 Game.prototype.ready = function (cb) {
     this.el.empty().css('position', 'absolute').css('float', 'left').hide();
     for (let terrain of this.terrains)
-        if (terrain instanceof Terrain)
+        if (terrain instanceof Terrain) {
             this.__buildTerrain(terrain.layers);
+            this.el.append(terrain.tileset._frame);
+        }
     this.el.css('width', this.terrains[0].width + 'px')
         .css('height', this.terrains[0].height + 'px')
         .css('left', (window.innerWidth - this.el.width()) / 2)
         .css('top', (window.innerHeight - this.el.height()) / 2)
         .fadeIn('slow');
     if (cb) cb();
-}
-
-Game.prototype.render = function () {
-    for (let layer of terrain.layers)
-        for (let cell of layer)
-            this.el.append(cell);
 }
 
 Game.prototype.__buildTerrain = function (layer) {
