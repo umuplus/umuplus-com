@@ -7,14 +7,9 @@ jQuery(function ($) {
 
 function renderGame() {
     $terrain = new Terrain();
-    $terrain.addLayer(function(el) {
-        console.log(this.offsetLeft, this.offsetTop);
-    }, {
-        in: function(el) {
-            $terrain.tileset.border(el, 4);
-        },
-        out: function(el) {
-            $terrain.tileset.border(el);
+    $terrain.addLayer({
+        click: function(el) {
+            $terrain.tileset.frame(el.position(), 4);
         }
     });
 
