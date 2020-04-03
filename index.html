@@ -1,346 +1,144 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Umut / Server-side Wizard</title>
-    <link href="favicon.png" rel=icon>
-    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-</head>
-<body id="page-top" data-spy="scroll" data-target=".navbar">
-    <div id="main-wrapper">
-        <div id="preloader">
-            <div id="status">
-                <div class="status-mes"></div>
-            </div>
-        </div>
-        <div class="columns-block container">
-            <div class="left-col-block blocks">
-                <header class="header theiaStickySidebar">
-                    <div class="profile-img">
-                        <img src="img/profile.jpg" class="img-responsive" alt=""/>
-                    </div>
-                    <div class="content">
-                        <h1>Umut Aydin</h1>
-                        <span class="lead">Passionate Node.js Developer, IoT Expert & Server-side Wizard @ <a href="http://dvs-tr.com/">DVS</a></span>
-                        <ul class="social-icon">
-                            <li><a href="http://linkedin.com/in/umuplus"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="http://github.com/umuplus"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                            <li><a href="http://twitter.com/umuplus"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.youracclaim.com/user/umuplus"
-                                title="Certificates"><i class="fa fa-certificate" aria-hidden="true"></i></a></li>
-                            <li><a href="javascript:" title="35330 Izmir, Turkey"><i class="fa fa-map-marker" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </header>
-            </div>
-            <div class="right-col-block blocks">
-                <div class="theiaStickySidebar">
-                    <section class="section-wrapper section-interest gray-bg">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="section-title">
-                                        <h2>About</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="content-item">
-                                        <p>Software development has always been my best hobby and also my dream job since I was 14.
-                                            Now, after more than 15 years as a professional, I can honestly say that dealing with a real-life problem to bring
-                                            a 2-digits solution in a form of software architecture is a pure passion to me. Not just making it "work", also
-                                            making it work right and stable. Because of that approach, I always design for what's coming instead of what
-                                            it's at the moment.</p>
-                                    </div>
-                                    <div class="content-item">
-                                        <p>The curiosity and the interest of problem solving which got me into "coding", are still leading my career path but
-                                            above all that, there is connectivity and the data. That's why I have been choosing to be a part of data-oriented
-                                            projects which require high concurrency such as online advertising, online gaming and finally IoT in my last 8 years.</p>
+    <head>
+        <title>Umut / Server-side Wizard</title>
+        <link href="favicon.png" rel="icon" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Ubuntu"
+            rel="stylesheet"
+        />
+        <style>
+            html {
+                --black: #3b3737;
+                --red: #991818;
+                --white: #f7f7f7;
+                --gray: #c9d1d3;
+                --blue: #3498db;
+            }
 
-                                    </div>
-                                    <div class="content-item">
-                                        <p>I believe that being a professional requires 2 elements in the core: information and experience. Information part has
-                                            to keep growing in balance. Because, the technology doesn't stop. And experience part is not about the time you spent
-                                            in tech business. It's mostly what you have collected into your bag from earlier projects. It's about what you're ready
-                                            for. And when you have your hobby as a work title, you feel ready for almost anything.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="expertise-wrapper section-wrapper gray-bg">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="section-title">
-                                        <h2>Expertise</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>Thinking Out Of The Box</h3>
-                                        <p>Identifying Problems, Project Analysis & Process Management</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>Server-side Development</h3>
-                                        <p>Distributed, Scalable & Highly Available Network Applications, Real-time Data Processing</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>Web Application Development</h3>
-                                        <p>Social Networks, Content Management Systems, Online Games & more</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>Mobile Development</h3>
-                                        <p>Native Android Applications & Hybrid (HTML5) Applications with Cordova<sup>TM</sup></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>Technology Stack</h3>
-                                        <p>Node.js, Javascript, ES6, Typescript, Java, Kotlin, Python, HTML5, SQL, Vue.js, React.js</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>More Technology Stack</h3>
-                                        <p>MongoDB, MySQL, PostgreSQL, Redis, Neo4J, Elastic Search, RabbitMQ, ZeroMQ, Web Sockets</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>Experiences</h3>
-                                        <p>Online Advertising, Online Gaming & Multiplayer Design, Payment Systems, Document Management & Security</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>More Experiences</h3>
-                                        <p>Microservices, Distributed Network Application Development, GeoLocation, Internet of Things</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="expertise-wrapper section-wrapper gray-bg">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="section-title">
-                                        <h2>Projects</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>nanopoly</h3>
-                                        <p>A minimalist polyglot toolkit for building fast, scalable and fault tolerant microservices
-                                            <a href="https://github.com/nanopoly" target="_blank">more »</a></p>
-                                        <p>An experimental nanomsg transport plugin
-                                            <a href="https://github.com/nanopoly/nanopoly-nanomsg" target="_blank">nanopoly-nanomsg »</a></p>
-                                        <p>An experimental zeromq transport plugin
-                                                <a href="https://github.com/nanopoly/nanopoly-zeromq" target="_blank">nanopoly-zeromq »</a></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>beems</h3>
-                                        <p>A bee-queue based minimalist toolkit for building fast, decentralized, scalable and fault tolerant microservices.
-                                            <a href="https://github.com/umuplus/beems" target="_blank">more »</a></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>clerq</h3>
-                                        <p>a redis based minimalist service registry and service discovery.
-                                            <a href="https://github.com/Dvs-Bilisim/clerq" target="_blank">more »</a></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>dot</h3>
-                                        <p>A minimalist toolkit for building fast, decentralized, scalable and fault tolerant microservices.
-                                            <a href="https://github.com/dot-microservices/dot" target="_blank">more »</a></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>dot-rest</h3>
-                                        <p>A minimalist toolkit for building fast, scalable and fault tolerant microservices.
-                                            <a href="https://github.com/dot-microservices/dot-rest" target="_blank">more »</a></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>dot-ws</h3>
-                                        <p>A minimalist toolkit for building fast, scalable and fault tolerant microservices.
-                                            <a href="https://github.com/dot-microservices/dot-ws" target="_blank">more »</a></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>rfmjs</h3>
-                                        <p>RFM analysis for customer segmentation in js.
-                                            <a href="https://github.com/umuplus/rfmjs" target="_blank">more »</a></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="expertise-item">
-                                        <h3>node-authjs</h3>
-                                        <p>key manager and auth wrapper for jwt in node.js
-                                            <a href="https://github.com/umuplus/authjs" target="_blank">more »</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="section-wrapper skills-wrapper">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="section-title">
-                                        <h2>Skills</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="progress-wrapper">
-                                        <div class="progress-item">
-                                            <span class="progress-title">Node.js, Javascript, Typescript</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 95%"><span class="progress-percent"> 95%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">Java, Kotlin</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 85%"><span class="progress-percent"> 85%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">Android</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 85%"><span class="progress-percent"> 85%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">Python</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 80%"><span class="progress-percent"> 80%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">MongoDB</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 95%"><span class="progress-percent"> 95%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">Redis</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 95%"><span class="progress-percent"> 95%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">Elastic Search</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 90%"><span class="progress-percent"> 90%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">MySQL</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 95%"><span class="progress-percent"> 95%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">Neo4j</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 85%"><span class="progress-percent"> 85%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">Docker, docker-compose</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 85%"><span class="progress-percent"> 85%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">Vue.js</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 85%"><span class="progress-percent"> 85%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="progress-item">
-                                            <span class="progress-title">Linux, Ubuntu</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                                                        aria-valuemax="100" style="width: 95%"><span class="progress-percent"> 95%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <footer class="footer">
-                        <div class="copyright-section">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="copytext">
-                                            &copy; Resumex. All rights reserved | Design By: <a href="https://themehippo.com">themehippo</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+            body {
+                font-family: 'Ubuntu', sans-serif;
+                color: var(--black);
+                background-color: var(--white);
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            a {
+                color: var(--blue);
+            }
+
+            main {
+                margin-top: -10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            main h1,
+            main h3 {
+                margin: 0;
+                padding: 0;
+                font-weight: normal;
+            }
+
+            main h1 {
+                font-size: 100px;
+                line-height: 100px;
+                margin-right: 20px;
+            }
+
+            main h3 {
+                font-size: 20px;
+                line-height: 50px;
+                margin-top: 50px;
+            }
+
+            @keyframes bounce {
+                0% {
+                    transform: scale(1, 1) translateY(0);
+                }
+                10% {
+                    transform: scale(1.1, 0.9) translateY(0);
+                }
+                30% {
+                    transform: scale(0.9, 1.1) translateY(-50px);
+                }
+                50% {
+                    transform: scale(1.05, 0.95) translateY(0);
+                }
+                57% {
+                    transform: scale(1, 1) translateY(-7px);
+                }
+                64% {
+                    transform: scale(1, 1) translateY(0);
+                }
+                100% {
+                    transform: scale(1, 1) translateY(0);
+                }
+            }
+
+            .dot {
+                color: var(--blue);
+                display: inline-flex;
+                animation-name: bounce;
+                animation-timing-function: ease;
+                animation-duration: 2s;
+                animation-iteration-count: 1;
+            }
+
+            .links {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                margin-top: 20px;
+            }
+
+            .links li {
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            .links a {
+                text-decoration: none;
+                transition: transform 0.3s ease;
+                display: inline-flex;
+            }
+
+            .links a:hover {
+                transform: translateY(-3px);
+            }
+
+            @media (max-width: 1024px) {
+                main h3 {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div>
+                <div style="display: flex;">
+                    <h1>umu<span class="dot">.</span><sup>plus</sup></h1>
                 </div>
+                <h3>
+                    <strong>»</strong> Passionate Node.js Developer <br />
+                    <strong>»</strong> Server-side Wizard <br />
+                    <strong>»</strong> IoT Expert <br />
+                    <strong>»</strong> … and a curious being
+                </h3>
+                <ul class="links">
+                    <li><a href="https://github.com/umuplus">GitHub</a></li>
+                    <li>
+                        <a href="http://linkedin.com/in/umuplus">Linkedin</a>
+                    </li>
+                    <li><a href="https://twitter.com/umuplus">Twitter</a></li>
+                </ul>
             </div>
-        </div>
-    </div>
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/theia-sticky-sidebar.js"></script>
-    <script src="js/scripts.js"></script>
-</body>
+        </main>
+    </body>
 </html>
